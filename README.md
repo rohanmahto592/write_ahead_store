@@ -20,6 +20,8 @@ A **lightweight, durable, thread-safe key-value store** in Python with **O(1) op
 
 - **Concurrent Reads**  
   Multiple threads can read simultaneously using **shared locks**, without blocking each other.
+- **Performance highlight**
+  1M insertions in ~70s using 100 threads 🚀
 
 - **Simple API**  
   ```python
