@@ -23,38 +23,6 @@ A **lightweight, durable, thread-safe key-value store** in Python with **O(1) op
 - **Performance highlight** <br>
   *1M insertions in ~70s using 100 threads*
 
-- **How It Works**
-
-Write-Ahead Log (WAL)
-
-Every operation is appended to a log file first.
-
-Format: [timestamp, key_length, value_length] + key_bytes + value_bytes
-
-value_length = 0 → indicates deletion.
-
-In-Memory Store
-
-Python dictionary { key: (offset, is_set) }
-
-Provides O(1) get, set, delete operations.
-
-Recovery
-
-On startup, WAL is replayed to rebuild in-memory store.
-
-Ensures data is not lost in case of crashes.
-
-Concurrency
-
-Thread lock ensures safe updates to in-memory dictionary.
-
-File locks:
-
-Exclusive → write operations
-
-Shared → concurrent reads
-
 - **Simple API**  
   ```python
   kv = WriteAheadStore()
