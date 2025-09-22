@@ -29,6 +29,6 @@ A **lightweight, durable, thread-safe key-value store** in Python with **O(1) op
   kv.delete("key1")
 
 - **Installation**  
- git clone https://github.com/yourusername/write-ahead-kv-store.git
- cd write-ahead-kv-store
+  git clone https://github.com/rohanmahto592/write_ahead_store.git <br>
+  cd write-ahead-kv-store
 
