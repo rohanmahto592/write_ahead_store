@@ -30,7 +30,7 @@ A **lightweight, durable, thread-safe key-value store** in Python with **O(1) op
 
 - **Installation**  
   git clone https://github.com/rohanmahto592/write_ahead_store.git <br>
-  cd write-ahead-kv-store
+  cd write-ahead-store
 
 - **Python Packages**
   - `portalocker` - For cross-platform file locking
