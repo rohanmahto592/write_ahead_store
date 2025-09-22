@@ -32,3 +32,10 @@ A **lightweight, durable, thread-safe key-value store** in Python with **O(1) op
   git clone https://github.com/rohanmahto592/write_ahead_store.git <br>
   cd write-ahead-kv-store
 
+- **Python Packages**
+  - `portalocker` - For cross-platform file locking
+  - `struct`, `time`, `threading` (standard library)
+
+```bash
+pip install portalocker
+
