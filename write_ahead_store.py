@@ -29,7 +29,7 @@ class WriteAheadStore(BaseStore):
         self.__logger = Logger()
         self.__write_ahead_log_file_path = "write_ahead.log"
         self.__file = open(self.__write_ahead_log_file_path, "ab+")
-        self.__thread_lock = threading.Lock()   # 🔒 Thread-level lock
+        self.__thread_lock = threading.Lock() 
         self.recovery()
 
     @property
@@ -283,3 +283,4 @@ class WriteAheadStore(BaseStore):
                 return False
             finally:
                 self.__unlock_file(self.__file)
+
